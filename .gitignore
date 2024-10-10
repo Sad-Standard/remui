@@ -1,0 +1,9 @@
+
+# Ignore Kotlin compiler directory
+**/.kotlin
+
+# Gradle
+**/build
+**/.gradle
+
+**/kotlin-js-store
