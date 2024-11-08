@@ -20,8 +20,20 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/buildSrc" />
+            <option value="$PROJECT_DIR$/playground-js" />
+            <option value="$PROJECT_DIR$/remui-client" />
             <option value="$PROJECT_DIR$/remui-compiler-plugin" />
+            <option value="$PROJECT_DIR$/remui-components/common/client-compose" />
+            <option value="$PROJECT_DIR$/remui-components/common/server" />
+            <option value="$PROJECT_DIR$/remui-components/common/set" />
+            <option value="$PROJECT_DIR$/remui-components/html/client-compose" />
+            <option value="$PROJECT_DIR$/remui-components/html/server" />
+            <option value="$PROJECT_DIR$/remui-components/html/set" />
             <option value="$PROJECT_DIR$/remui-core" />
+            <option value="$PROJECT_DIR$/remui-json" />
+            <option value="$PROJECT_DIR$/remui-ktor-core" />
+            <option value="$PROJECT_DIR$/remui-ktor-server" />
+            <option value="$PROJECT_DIR$/remui-protobuf" />
             <option value="$PROJECT_DIR$/remui-server" />
           </set>
         </option>

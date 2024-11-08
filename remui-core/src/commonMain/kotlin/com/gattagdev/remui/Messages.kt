@@ -1,4 +1,5 @@
-/* Copyright Stronghold Robotics, Gregory Tracy, and other original others.
+/*
+ * Copyright Dynamic Animation Systems, Stronghold Robotics, and other original others.
  *
  * All rights reserved. This program and the accompanying materials are
  * made available under the terms of the Eclipse Public License v2.0 which
@@ -11,62 +12,68 @@
 package com.gattagdev.remui
 
 import kotlinx.serialization.ExperimentalSerializationApi
-import kotlinx.serialization.KSerializer
 import kotlinx.serialization.Serializable
-import kotlinx.serialization.descriptors.PrimitiveKind
-import kotlinx.serialization.descriptors.PrimitiveSerialDescriptor
-import kotlinx.serialization.descriptors.SerialDescriptor
-import kotlinx.serialization.descriptors.buildClassSerialDescriptor
-import kotlinx.serialization.descriptors.element
-import kotlinx.serialization.encoding.Decoder
-import kotlinx.serialization.encoding.Encoder
-import kotlinx.serialization.encoding.decodeStructure
-import kotlinx.serialization.encoding.encodeStructure
-import kotlinx.serialization.modules.SerializersModule
-import kotlinx.serialization.modules.contextual
-import kotlinx.serialization.protobuf.ProtoOneOf
-import kotlinx.serialization.serializer
-import kotlin.reflect.KClass
-import kotlin.reflect.typeOf
 
+//private typealias KClassSerializable = @Serializable @Polymorphic KClass<Any>
+
+
+
+/**
+ * TODO Document
+ */
 @Serializable
 data class ServerUpdate(
-    val interactionNr: Int,
-    val addDiffs: Set<AddDiff>,
-    val propDiffs: Set<PropDiff>,
-    val removeDiffs: Set<RemoveDiff>,
-    val rootId: Long
+    val interactionNr: Int?             = null,
+    val addDiffs     : List<AddDiff>    = emptyList(),
+    val propDiffs    : List<PropDiff>   = emptyList(),
+    val removeDiffs  : List<RemoveDiff> = emptyList(),
+    val rootId       : Int?            = null
 )
 
+/**
+ * TODO Document
+ */
 @Serializable
 data class AddDiff(
-    val id: Long,
+    val id     : Int,
     val classId: Int,
-    val types: Map<String, SerializedKType>
+    val types  : Map<String, SerializedKType> = mapOf(),
 )
 
+/**
+ * TODO Document
+ */
 @Serializable
 data class PropDiff(
-    val id: Long,
-    val propId: PropId,
-    val newValue: SerializedData
+    val id      : Int,
+    val propId  : Int,
+    val newValue: ByteArray
 )
 
+/**
+ * TODO Document
+ */
 @Serializable
 data class RemoveDiff(
-    val id: Long
+    val id: Int
 )
 
+/**
+ * TODO Document
+ */
 @Serializable
 data class InteractionBlockMessage(
     val interactions: List<InteractionMessage>
 )
 
+/**
+ * TODO Document
+ */
 @Serializable
 data class InteractionMessage(
     val interactionNr: Int,
-    val subjectId: Long,
+    val subjectId: Int,
     val name: String,
-    val args: List<SerializedData>
+    val args: List<ByteArray>
 )
 

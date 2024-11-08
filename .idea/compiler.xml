@@ -2,6 +2,10 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
+      <module name="com.gattagdev.remui.remui.remui-html-client-compose" target="21" />
+      <module name="com.gattagdev.remui.remui.remui-html-server" target="21" />
+      <module name="com.gattagdev.remui.remui.remui-html-set" target="21" />
+      <module name="remui.playground-js-server" target="21" />
       <module name="remui.remui-core.main" target="21" />
       <module name="remui.remui-core.test" target="21" />
     </bytecodeTargetLevel>

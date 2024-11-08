@@ -1,0 +1,7 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Playground A" type="CompoundRunConfigurationType">
+    <toRun name="Playground Server A" type="GradleRunConfiguration" />
+    <toRun name="Playground Web" type="GradleRunConfiguration" />
+    <method v="2" />
+  </configuration>
+</component>

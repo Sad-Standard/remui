@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE instance-profile
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/product-profile.dtd">
+
+<instance-profile id="rug"
+                 name="Remui User Guide"
+                 start-page="Getting-started.md">
+
+    <toc-element topic="discover-remui.md">
+        <toc-element topic="Getting-started.md"/>
+        <toc-element topic="Getting-started-with-playground.md">
+            <toc-element topic="Without-IntelliJ-not-recommended.md"/>
+            <toc-element topic="With-IntelliJ-recommended.md"/>
+        </toc-element>
+    </toc-element>
+</instance-profile>

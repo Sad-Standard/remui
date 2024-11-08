@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright Dynamic Animation Systems, Stronghold Robotics, and other original others.
+  ~
+  ~ All rights reserved. This program and the accompanying materials are
+  ~ made available under the terms of the Eclipse Public License v2.0 which
+  ~ accompanies this distribution and is available at
+  ~ https://www.eclipse.org/legal/epl-v20.html
+  -->
+
+<!DOCTYPE rules SYSTEM "https://resources.jetbrains.com/writerside/1.0/redirection-rules.dtd">
+<rules>
+    <!-- format is as follows
+    <rule id="<unique id>">
+        <accepts>page.html</accepts>
+    </rule>
+    -->
+    <rule id="7cb6e74f">
+        <description>Created after removal of "with-intellij" from Remui User Guide</description>
+        <accepts>with-intellij.html</accepts>
+    </rule>
+</rules>

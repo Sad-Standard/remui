@@ -1,4 +1,5 @@
-/* Copyright Stronghold Robotics, Gregory Tracy, and other original others.
+/*
+ * Copyright Dynamic Animation Systems, Stronghold Robotics, and other original others.
  *
  * All rights reserved. This program and the accompanying materials are
  * made available under the terms of the Eclipse Public License v2.0 which
@@ -6,20 +7,24 @@
  * https://www.eclipse.org/legal/epl-v20.html
  */
 
-import org.gradle.kotlin.dsl.version
+
+import buildsrc.conventions.composeRuntimeVersion
+import buildsrc.conventions.coroutines
 
 plugins {
-    buildsrc.conventions.`kotlin-multiplatform`
-
+    buildsrc.conventions.`remui-server`
 }
-repositories {
-    google()
-    mavenCentral()
-    maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
-
-}
-
 
 kotlin {
+    sourceSets {
+        val jvmMain by getting {
+            dependencies {
+                api(project(":remui-core"))
+                implementation(coroutines("kotlinx-coroutines-android"))
+                implementation("org.jetbrains.compose.runtime:runtime:$composeRuntimeVersion")
+                implementation("androidx.collection:collection:1.4.0")
+            }
+        }
+    }
 
 }

@@ -1,4 +1,5 @@
 
+.idea/artifacts
 # Ignore Kotlin compiler directory
 **/.kotlin
 
