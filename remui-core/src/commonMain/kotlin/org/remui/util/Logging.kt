@@ -7,11 +7,5 @@
  * https://www.eclipse.org/legal/epl-v20.html
  */
 
-package my.test
+package org.remui.util
 
-import org.remui.ComposePersistenceConfig
-import org.remui.components.html.HtmlConfig
-import org.remui.protobuf.ProtoBufConfig
-
-
-val MyConfig = HtmlConfig + ProtoBufConfig + ComposePersistenceConfig

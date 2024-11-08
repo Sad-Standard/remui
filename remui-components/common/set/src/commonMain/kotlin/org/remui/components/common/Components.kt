@@ -7,11 +7,19 @@
  * https://www.eclipse.org/legal/epl-v20.html
  */
 
-package my.test
+package org.remui.components.common
 
-import org.remui.ComposePersistenceConfig
-import org.remui.components.html.HtmlConfig
-import org.remui.protobuf.ProtoBufConfig
+import org.remui.ComponentSet
+import org.remui.RStruct
+
+val CommonComponents = ComponentSet(
+    listOf(),
+    listOf(
+        RemoteValue::class
+    )
+)
 
 
-val MyConfig = HtmlConfig + ProtoBufConfig + ComposePersistenceConfig
+class RemoteValue<T>: RStruct.Impl(){
+    val remValue: T by _prop()
+}

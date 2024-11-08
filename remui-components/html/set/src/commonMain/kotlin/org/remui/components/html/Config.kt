@@ -7,11 +7,16 @@
  * https://www.eclipse.org/legal/epl-v20.html
  */
 
-package my.test
+package org.remui.components.html
 
-import org.remui.ComposePersistenceConfig
-import org.remui.components.html.HtmlConfig
-import org.remui.protobuf.ProtoBufConfig
+import org.remui.ClassModule
+import org.remui.RemuiConfig
+import org.remui.components.common.CommonConfig
 
 
-val MyConfig = HtmlConfig + ProtoBufConfig + ComposePersistenceConfig
+val HtmlConfig = CommonConfig + RemuiConfig(
+    objectModule = DomComponents + ClassModule(
+        Event::class, Event.Other::class,
+        Event.Mouse::class, Event.Input::class
+    )
+)

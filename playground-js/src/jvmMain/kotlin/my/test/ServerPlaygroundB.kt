@@ -11,13 +11,12 @@ package my.test
 
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.*
-import com.gattagdev.remui.components.common.asString
-import com.gattagdev.remui.components.common.server.Remote
-import com.gattagdev.remui.components.html.server.div
-import com.gattagdev.remui.components.html.server.h1
-import com.gattagdev.remui.components.html.server.p
-import com.gattagdev.remui.ktor.createRemuiIO
-import com.gattagdev.remui.server.RemuiServer
+import org.remui.components.common.server.Remote
+import org.remui.components.html.server.div
+import org.remui.components.html.server.h1
+import org.remui.components.html.server.p
+import org.remui.ktor.createRemuiIO
+import org.remui.server.RemuiServer
 import io.ktor.server.application.install
 import io.ktor.server.engine.embeddedServer
 import io.ktor.server.netty.Netty

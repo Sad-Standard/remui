@@ -7,11 +7,14 @@
  * https://www.eclipse.org/legal/epl-v20.html
  */
 
-package my.test
-
-import org.remui.ComposePersistenceConfig
-import org.remui.components.html.HtmlConfig
-import org.remui.protobuf.ProtoBufConfig
+package org.remui.playground
 
 
-val MyConfig = HtmlConfig + ProtoBufConfig + ComposePersistenceConfig
+// PLEASE IGNORE THIS FILE, it is purely for testing compiler plugin infra
+
+annotation class InvertedInfix()
+
+
+//@Retention(AnnotationRetention.SOURCE)
+@Target(AnnotationTarget.FUNCTION)
+annotation class Replace(val value: String)

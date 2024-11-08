@@ -7,11 +7,19 @@
  * https://www.eclipse.org/legal/epl-v20.html
  */
 
-package my.test
+package org.remui.util
 
-import org.remui.ComposePersistenceConfig
-import org.remui.components.html.HtmlConfig
-import org.remui.protobuf.ProtoBufConfig
+import kotlin.jvm.JvmInline
+import kotlin.reflect.KType
+import kotlin.reflect.typeOf
 
+/**
+ * TODO Document
+ */
+@JvmInline
+value class Wrapped<T>(val value: T)
 
-val MyConfig = HtmlConfig + ProtoBufConfig + ComposePersistenceConfig
+/**
+ * TODO Document
+ */
+inline fun <reified W: Wrapped<*>> wrappedTypeArg(): KType = typeOf<W>().arguments[0].type ?: error("Wrapped type argument T cannot be null")

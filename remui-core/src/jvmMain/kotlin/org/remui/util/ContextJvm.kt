@@ -7,11 +7,15 @@
  * https://www.eclipse.org/legal/epl-v20.html
  */
 
-package my.test
+package org.remui.util
 
-import org.remui.ComposePersistenceConfig
-import org.remui.components.html.HtmlConfig
-import org.remui.protobuf.ProtoBufConfig
+actual class Context<T> internal actual constructor(init: () -> T) {
 
+    private val local = ThreadLocal.withInitial(init)
 
-val MyConfig = HtmlConfig + ProtoBufConfig + ComposePersistenceConfig
+    actual var value: T
+        get() = local.get()
+        set(value) = local.set(value)
+
+    actual companion object
+}

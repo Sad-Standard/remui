@@ -7,9 +7,9 @@
  * https://www.eclipse.org/legal/epl-v20.html
  */
 
-package com.gattagdev.remui.ktor
+package org.remui.ktor
 
-import com.gattagdev.remui.RemuiIO
+import org.remui.RemuiIO
 import io.ktor.websocket.DefaultWebSocketSession
 import io.ktor.websocket.Frame
 import io.ktor.websocket.readText

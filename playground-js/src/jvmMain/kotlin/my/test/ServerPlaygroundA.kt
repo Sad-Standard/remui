@@ -18,11 +18,11 @@ import androidx.compose.runtime.internal.enableLiveLiterals
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
-import com.gattagdev.remui.components.common.server.Remote
-import com.gattagdev.remui.components.common.asString
-import com.gattagdev.remui.components.html.server.*
-import com.gattagdev.remui.ktor.createRemuiIO
-import com.gattagdev.remui.server.RemuiServer
+import org.remui.components.common.server.Remote
+import org.remui.components.common.asString
+import org.remui.components.html.server.*
+import org.remui.ktor.createRemuiIO
+import org.remui.server.RemuiServer
 import io.ktor.server.application.install
 import io.ktor.server.engine.embeddedServer
 import io.ktor.server.netty.Netty

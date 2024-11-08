@@ -9,19 +9,13 @@
 
 @file:OptIn(DelicateCoroutinesApi::class)
 
-import com.gattagdev.remui.RemuiIO
-import com.gattagdev.remui.client.RemuiClient
-import com.gattagdev.remui.client.RemuiClient.Companion.invoke
-import com.gattagdev.remui.components.html.DomNode
-import com.gattagdev.remui.components.html.client.DomNodeRender
-import com.gattagdev.remui.components.html.client.Render
-import com.gattagdev.remui.components.html.client.RootWrapper
-import com.gattagdev.remui.ktor.createRemuiIO
+import org.remui.client.RemuiClient
+import org.remui.client.RemuiClient.Companion.invoke
+import org.remui.components.html.client.Render
+import org.remui.ktor.createRemuiIO
 import io.ktor.client.HttpClient
 import io.ktor.client.plugins.websocket.WebSockets
 import io.ktor.client.plugins.websocket.webSocketSession
-import kotlinx.browser.document
-import kotlinx.browser.window
 import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch

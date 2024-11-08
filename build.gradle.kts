@@ -13,7 +13,7 @@ plugins {
 
 
 subprojects {
-    group = "com.gattagdev.remui"
+    group = "org.remui"
     version = "unspecified"
 }
 
